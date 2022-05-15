@@ -18,12 +18,12 @@ function* rootSaga() {
 
 }
 
-function* fetchMovie(){
-    try{
+function* fetchMovie(action) {
+    try {
         const movie = yield axios.get(`/api/movie/${action.payload}`)
         console.log ('get movie:', action.payload);
         yield put({
-            type: 'SET_MOVIE',
+            type: 'SET_MOVIES',
             payload: movie.data
         })
     } catch {
@@ -66,6 +66,8 @@ const genres = (state = [], action) => {
             return state;
     }
 }
+
+
 
 // Create one store that all components can use
 const storeInstance = createStore(
