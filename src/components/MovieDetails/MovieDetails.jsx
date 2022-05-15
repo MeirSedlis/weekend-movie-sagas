@@ -1,26 +1,35 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import Movie from "../Movie/Movie";
 
+function MovieDetails() {
+  const movies = useSelector((store) => store.movies);
+  const genres = useSelector((store) => store.genres);
+  const history = useHistory();
+  const goHome = () => {
+    history.push("/");
+  };
 
-function MovieDetails(){
-
-    const movies = useSelector(store => store.movies)
-    const genres = useSelector(store => store.genres)
-    
-    return(
-        <>
-        {movies && movies.map((movie) => {
-            return (
-                <div key={movie.id}>
-                    <img src={movie.poster} />
-                    <p>{movie.description}</p>
-                    <button>Go Back</button>
-                </div>
-            )
+  return (
+    <>
+      {movies &&
+        movies.map((movie) => {
+          return (
+            <div key={movie.id}>
+              <img src={movie.poster} />
+              <h1>{movie.title}</h1>
+              <p>{movie.description}</p>
+            </div>
+          );
         })}
-        {/* <h1>{genres && JSON.stringify(genres)}</h1> */}
-        </>
-    )
+      <h3>Genres</h3>
+      {genres &&
+        genres.map((genre) => {
+          return <p>{genre.name}</p>;
+        })}
+      <button onClick={goHome}>Go Back</button>
+    </>
+  );
 }
 
-export default MovieDetails
+export default MovieDetails;
