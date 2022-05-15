@@ -18,7 +18,10 @@ function* rootSaga() {
 
 }
 
+//****** SAGA SECTION ******\\ 
+     
 function* fetchMovie(action) {
+    //get individual movie details from the DB
     try {
         const movie = yield axios.get(`/api/movie/${action.payload}`)
         console.log ('get movie:', action.payload);
@@ -47,6 +50,8 @@ function* fetchAllMovies() {
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
+//****** REDUCERS *******\\ 
+
 // Used to store movies returned from the server
 const movies = (state = [], action) => {
     switch (action.type) {
@@ -66,8 +71,6 @@ const genres = (state = [], action) => {
             return state;
     }
 }
-
-
 
 // Create one store that all components can use
 const storeInstance = createStore(

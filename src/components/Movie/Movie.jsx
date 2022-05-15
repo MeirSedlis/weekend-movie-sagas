@@ -11,7 +11,7 @@ function Movie({movie}){
             payload: movie.id
         })
         // dispatch({
-        //     type: 'FETCH_GENRE',
+        //     type: 'FETCH_GENRES',
         //     payload: movie.id
         // })
         history.push('/details')
