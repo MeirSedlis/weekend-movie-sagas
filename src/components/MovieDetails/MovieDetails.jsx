@@ -18,7 +18,15 @@ function MovieDetails(){
                 </div>
             )
         })}
-        {/* <h1>{genres && JSON.stringify(genres)}</h1> */}
+        <ul>
+        {genres && genres.map((genre)=>{
+            return (
+                
+                    <li key={genre.id}>{genre.name}</li>
+                
+            )
+        })}
+        </ul>
         </>
     )
 }
