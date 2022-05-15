@@ -10,10 +10,10 @@ function Movie({movie}){
             type: 'FETCH_MOVIE',
             payload: movie.id
         })
-        // dispatch({
-        //     type: 'FETCH_GENRES',
-        //     payload: movie.id
-        // })
+        dispatch({
+            type: 'FETCH_GENRES',
+            payload: movie.id
+        })
         history.push('/details')
     }
 
