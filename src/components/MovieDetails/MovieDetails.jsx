@@ -25,7 +25,7 @@ function MovieDetails() {
       <h3>Genres</h3>
       {genres &&
         genres.map((genre) => {
-          return <p>{genre.name}</p>;
+          return <p>{genre.name}!</p>;
         })}
       <button onClick={goHome}>Go Back</button>
     </>
