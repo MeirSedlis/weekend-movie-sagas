@@ -27,7 +27,7 @@ function MovieDetails() {
         genres.map((genre) => {
           return <p>{genre.name}!</p>;
         })}
-      <button onClick={goHome}>Go Back</button>
+      <button onClick={goHome}>Go Back to home</button>
     </>
   );
 }
