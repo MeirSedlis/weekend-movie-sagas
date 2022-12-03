@@ -1,9 +1,7 @@
-# Project Name
+# Weekend Movie Sagas
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Use Redux-Saga to create a movie database with PostgreSQL. 
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This was one of the more challenging projects for me at Prime Digital because I had strep throat and Covid-19 back to back. I'm very proud of myself that I did not miss any assignments and was able to continue the program remotely and complete this project with countless bowls of soup and the support of my fantastic classmates and instructors.
